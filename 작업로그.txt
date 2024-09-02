@@ -1,2 +1,20 @@
-9/3
+### 9/3
+#0강
 npx create-react-app blog로 리액트 새로 생성
+메인페이지: src/App.js
+미리보기: 터미널에 npm start
+
+#2강
+리액트는 데이터바인딩이 매우 쉽다. 그래서 쌩HTML 대신 React를 쓴다.
+데이터바인딩: 서버에서 가져온 데이터를 javascript로 받아온 후 html을 통해 화면에 나타내는 방법.
+
+#3강
+useState
+state에 데이터 저장하는 이유는 웹이 app처럼 동작하게 만들고 싶어서임
+state는 변경되면 html이 자동으로 재렌더링된다.
+state의 구조: [state,변경state] = useState(['자료1', '자료2', '자료3', ... ]);
+html에 그대로 { state[0] } 이런식으로 표시,
+
+#4강
+터미널에 문법적 warning이 안뜨게 하고 싶으면 /* eslint-disable */ 
+
