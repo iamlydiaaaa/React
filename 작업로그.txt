@@ -27,3 +27,15 @@ var newArray = [...원래state];
 Component: HTML을 한 단어로 줄여서 쓰는 방법.
 예로, <div></div> 대신에, <Modal />
 반복출현하는 html덩어리들을 Component로 만드는 게 좋다.
+
+
+#8강
+map: 복붙할 때 좋음
+[1,2,3].map(function(){}) 를 실행하면, array[] 내의 자료 갯수만큼 함수 안의 코드를 실행해줌
+
+글제목.map(function(a, i) 에서 i는 반복문이 0부터 1씩 증가하는 함수
+
+#9강
+Props: 부모가 가지고 있던 state를 자식도 쓸 수 있게 해줌(원래는 변수는 바깥으로 이동못함)
+원래 <Modal />에서 <Modal 작명={state이름}/> 이렇게 바꿈
+이제 Modal()을 Modal(props)로 변경하고, {props.작명} 이렇게 사용하면 됨
