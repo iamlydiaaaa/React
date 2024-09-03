@@ -28,6 +28,7 @@ Component: HTML을 한 단어로 줄여서 쓰는 방법.
 예로, <div></div> 대신에, <Modal />
 반복출현하는 html덩어리들을 Component로 만드는 게 좋다.
 
+###9/4
 
 #8강
 map: 복붙할 때 좋음
@@ -39,3 +40,18 @@ map: 복붙할 때 좋음
 Props: 부모가 가지고 있던 state를 자식도 쓸 수 있게 해줌(원래는 변수는 바깥으로 이동못함)
 원래 <Modal />에서 <Modal 작명={state이름}/> 이렇게 바꿈
 이제 Modal()을 Modal(props)로 변경하고, {props.작명} 이렇게 사용하면 됨
+
+#10강
+<input onChange={(e) => { console.log(e.target.value)}}></input> 
+입력값이 바뀔 때마다 알게 해줌
+
+#12강
+Class 문법으로 컴포넌트를 만들려면: 
+기본세팅: class Modal2 extends React.Component{
+  constructor(){
+    super()
+  }
+  render(){
+  }
+}
+
