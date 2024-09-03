@@ -6,6 +6,7 @@ import './App.css';
 function App() {
 
   let [글제목,글제목변경] = useState(['남자 코트 추천', '강남 우동 맛집', '파이썬독학']);
+  let [글내용,글내용변경] = useState(['내용1','내용2','내용3']);
   
   let [따봉, 따봉변경] = useState([0,0,0]);
   let [날짜, 날짜변경] = useState(['9월 3일','9월 4일','9월 5일'])
@@ -25,10 +26,11 @@ function App() {
       <div className="black-nav">
         <div>React Blog</div>
       </div>  
-      <button onClick={() => { 제목바꾸기() } }>변경버튼</button>
+      {/* <button onClick={() => { 제목바꾸기() } }>변경버튼</button> */}
       <br />
-      <div>
+      <div className="add-box">
         {/* Add */}
+        <span>Add A Title</span>
       <input onChange={(e) => { 
         입력값변경(e.target.value);
        }} />
@@ -53,7 +55,7 @@ function App() {
         글제목.map(function(a, i){
           return (
             <div className="list" key={i}>
-              <h3 onClick={ () => { setModal(true); setTitle(i) }}>{ 글제목[i] } 
+              <h3 className="list-title" onClick={ () => { setModal(true); setTitle(i) }}>{ 글제목[i] } 
                 <span onClick={ (e) => {
                   e.stopPropagation(); 
                   let copy = [...따봉];
@@ -61,12 +63,12 @@ function App() {
                   따봉변경(copy)
                  } }>👍</span>{따봉[i]} 
               </h3>
-              <p>{날짜[i]} 발행</p>
+              <p className="list-date">{날짜[i]} 발행</p>
               <button onClick={() => {
                 let copy = [...글제목];
                 copy.splice(i, 1);
                 글제목변경(copy);
-              }}>삭제</button>
+              }}>Delete</button>
               <hr/>
             </div>
           )
@@ -75,10 +77,10 @@ function App() {
 
       {
         // 조건식 ? 참일때 실행할코드 : 거짓일때 실행할코드
-        modal == true ? <Modal color={['skyblue', 'lightpink']} title={title} 글제목={글제목} 날짜={날짜} 제목바꾸기={제목바꾸기} /> : null
+        modal == true ? <Modal title={title} 글제목={글제목} 날짜={날짜} 글내용={글내용} 제목바꾸기={제목바꾸기} /> : null
       }
      
-     <Modal2 />
+     {/* <Modal2 /> */}
     </div>
 
    
@@ -89,11 +91,11 @@ function App() {
 
 function Modal(props){
   return (
-    <div className="modal" style={{background : props.color[0]}}>
-        <h2>{props.글제목[props.title]}</h2>
-        <p>{props.날짜[props.title]} 발행</p>
-        <p>상세내용</p>
-        <button onClick={ () => {props.제목바꾸기()}}>글수정</button>
+    <div className="modal" >
+        <h2 className="modal-title">{props.글제목[props.title]}</h2>
+        <p className="modal-date">{props.날짜[props.title]} 발행</p>
+        <p className="modal-content">{props.글내용[props.title]}</p>
+        <button onClick={ () => {props.제목바꾸기()}}>Change title</button>
       </div>
   )
 }

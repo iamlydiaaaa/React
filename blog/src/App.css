@@ -8,15 +8,61 @@
   pointer-events: none;
 }
 
+button{
+  padding: 7px 20px;
+  border: 1px solid #03c75a;
+  color: #03c75a;
+  background-color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+button:hover{
+  background-color: #03c75a;
+  color: #fff;
+}
+
+.add-box{
+  width: 450px;
+  margin: 0 auto;
+  padding: 10px 0;
+  border: 1px solid #03c75a;
+  border-radius: 50px;
+  
+}
+.add-box span{
+  color: #03c75a;
+}
+.add-box input{
+  margin: 0 20px;
+  padding: 5px 10px;
+  border: 0;
+  outline: none;
+  border-bottom: 3px solid #03c75a;
+}
+
+.add-box button{}
+
+
+
 .modal{
   margin-top: 20px;
   padding: 20px;
-  background: #eee;
+  background: #e6f3ec;
 
 }
 
+.modal-title{
+  
+}
+
+.modal-date{
+  color: #999;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #aaa;
+}
+
 .black-nav {
-  background: #000;
+  background: #03c75a;
   width: 100%;
   display: flex;
   color: white;
@@ -28,6 +74,18 @@
 .list{
   padding: 0 20px;
   text-align-last: left;
+}
+
+.list-title{
+  display: inline-block;
+  cursor: pointer;
+}
+.list-title:hover{
+  text-decoration: underline;
+}
+
+.list-date{
+  color: #999;
 }
 
 @media (prefers-reduced-motion: no-preference) {
