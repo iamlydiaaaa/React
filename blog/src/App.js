@@ -5,8 +5,8 @@ import './App.css';
 
 function App() {
 
-  let [글제목,글제목변경] = useState(['남자 코트 추천', '강남 우동 맛집', '파이썬독학']);
-  let [글내용,글내용변경] = useState(['내용1','내용2','내용3']);
+  let [글제목,글제목변경] = useState(['남자 코트 추천', '강남 우동 맛집', '즐거운 리액트 독학']);
+  let [글내용,글내용변경] = useState(['Content1','Content2','Content3']);
   
   let [따봉, 따봉변경] = useState([0,0,0]);
   let [날짜, 날짜변경] = useState(['9월 3일','9월 4일','9월 5일'])
@@ -16,7 +16,7 @@ function App() {
 
   function 제목바꾸기(){
     var newArray = [...글제목];
-    newArray[0] = '여자 코트 추천';
+    newArray[0] = 'This is new title';
     글제목변경( newArray );
   }
 
