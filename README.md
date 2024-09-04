@@ -1,4 +1,4 @@
-To the final work : #react-simple-blog.github.io
+<h2>Link to the work: #<a href="iamlydiaaaa.github.io/react-simple-blog/index.html"></a></h2>  
 
 <img src="blog-img.png" />
 
